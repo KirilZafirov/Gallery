@@ -26,5 +26,18 @@ namespace Gallery.Controllers
 
             return View();
         }
+        
+        public ActionResult Portfolio()
+        {
+            ViewBag.Message = "Your portfolio page.";
+
+            return View();
+        }
+        public ActionResult Gallery()
+        {
+            ViewBag.Message = "Your Gallery page.";
+
+            return View();
+        }
     }
 }

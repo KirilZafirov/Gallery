@@ -12,12 +12,32 @@ namespace Gallery
         public static void RegisterRoutes(RouteCollection routes)
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
-
+        
             routes.MapRoute(
-                name: "Default",
-                url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
-            );
+              name: "About",
+              url: "Био",
+              defaults: new { controller = "Home", action = "About", id = UrlParameter.Optional }
+          );
+            routes.MapRoute(
+              name: "Contact",
+              url: "Контакт",
+              defaults: new { controller = "Home", action = "Contact", id = UrlParameter.Optional }
+          );
+            routes.MapRoute(
+              name: "Portfolio",
+              url: "Портфолио",
+              defaults: new { controller = "Home", action = "Portfolio", id = UrlParameter.Optional }
+          );
+            routes.MapRoute(
+              name: "Gallery",
+              url: "Галерија",
+              defaults: new { controller = "Home", action = "Gallery", id = UrlParameter.Optional }
+          );
+            routes.MapRoute(
+           name: "Default",
+           url: "{controller}/{action}/{id}",
+           defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+       );
         }
     }
 }
